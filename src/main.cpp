@@ -18,6 +18,7 @@ int main() {
     for (int x = -50; x <= 50; x += 10) {
         bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, -30);
         BN_LOG("top value", x);
+        myCircle.set_horizontal_scale(1.8);
         circles.push_back(myCircle);
     }
 
@@ -39,12 +40,15 @@ int main() {
     for (int x = -50; x <= 50; x += 10) {
         bn::sprite_ptr myCircle = bn::sprite_items::dot.create_sprite(x, 30);
         BN_LOG("bottom value", x);
+        myCircle.set_horizontal_scale(1.8);
         circles.push_back(myCircle);
     }
 
     /*  EYES  */
     bn::sprite_ptr myCircle1 = bn::sprite_items::dot.create_sprite(-30, -10);
     bn::sprite_ptr myCircle2 = bn::sprite_items::dot.create_sprite(30, -10);
+    myCircle1.set_shear(1.8);
+    myCircle2.set_shear(1.8);
 
     /*  SMILE  */
     bn::sprite_ptr myCircle3 = bn::sprite_items::dot.create_sprite(-30, 10);
